@@ -69,14 +69,18 @@ Encapsulated class structure	Global functions & variables
 WordPress lifecycle aware	No framework lifecycle
 
 In WordPress development:
+
     • Code responds to events instead of running sequentially
     • Core APIs handle security, persistence, and extensibility
     • Plugins extend WordPress rather than replacing its architecture
+    
 7. Summary
+
 This plugin demonstrates proper WordPress development practices by:
     • Using hooks and shortcodes to integrate with core
     • Structuring the plugin using OOP principles
     • Leveraging the Settings API for secure option handling
     • Applying correct sanitization and escaping
     • Avoiding plain PHP patterns in favor of WordPress APIs
+    
 The result is a secure, maintainable, and WordPress-compliant plugin.
