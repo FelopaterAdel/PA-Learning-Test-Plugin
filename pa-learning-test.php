@@ -5,8 +5,6 @@
  * Description: A minimal plugin demonstrating WordPress core APIs, hooks, and coding standards.
  * Version: 1.0.0
  * Author: Felopater Adel
- * License: GPL v2 or later
- * Text Domain: pa-learning-test
  */
 
 // Prevent direct access
@@ -94,14 +92,14 @@ class PA_Learning_Test_Plugin {
          */
         public function render_settings_page() {
             ?>
-            <div class="wrap">
-                <h1><?php echo esc_html__('PA Learning Test Settings', 'pa-learning-test'); ?></h1>
+            <div class="wrap" style="max-width: 600px; margin: 40px auto; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+                <h1 style="text-align: center; color: #333; margin-bottom: 30px;"><?php echo esc_html__('PA Learning Test Settings', 'pa-learning-test'); ?></h1>
                 
                 <form method="post" action="options.php">
                     <?php
                     settings_fields('pa_learning_test_group');
                     do_settings_sections('pa-learning-test');
-                    submit_button();
+                    submit_button(__('Save Settings'), 'primary', 'submit', true);
                     ?>
                 </form>
                 <?php $this->display_saved_value(); ?>
